@@ -1,0 +1,188 @@
+﻿namespace NetflixApp
+{
+    partial class NetflixForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NetflixForm));
+            this.wb1 = new System.Windows.Forms.WebBrowser();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.emailTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.pwTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.bigMainLogoPBox = new System.Windows.Forms.PictureBox();
+            this.smallLogoPBox = new System.Windows.Forms.PictureBox();
+            this.progressSpinner = new MetroFramework.Controls.MetroProgressSpinner();
+            this.logoutButton = new MetroFramework.Controls.MetroButton();
+            ((System.ComponentModel.ISupportInitialize)(this.bigMainLogoPBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smallLogoPBox)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // wb1
+            // 
+            this.wb1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wb1.Location = new System.Drawing.Point(23, 60);
+            this.wb1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wb1.Name = "wb1";
+            this.wb1.ScriptErrorsSuppressed = true;
+            this.wb1.Size = new System.Drawing.Size(679, 514);
+            this.wb1.TabIndex = 0;
+            this.wb1.TabStop = false;
+            this.wb1.Url = new System.Uri("", System.UriKind.Relative);
+            this.wb1.Visible = false;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(263, 464);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(180, 30);
+            this.metroButton1.TabIndex = 1;
+            this.metroButton1.Text = "Click to Enter Email";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.Lines = new string[0];
+            this.emailTextBox.Location = new System.Drawing.Point(263, 371);
+            this.emailTextBox.MaxLength = 32767;
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.PasswordChar = '\0';
+            this.emailTextBox.PromptText = "Email";
+            this.emailTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.emailTextBox.SelectedText = "";
+            this.emailTextBox.Size = new System.Drawing.Size(180, 30);
+            this.emailTextBox.TabIndex = 2;
+            this.emailTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.emailTextBox.UseSelectable = true;
+            // 
+            // pwTextBox
+            // 
+            this.pwTextBox.Lines = new string[0];
+            this.pwTextBox.Location = new System.Drawing.Point(263, 418);
+            this.pwTextBox.MaxLength = 32767;
+            this.pwTextBox.Name = "pwTextBox";
+            this.pwTextBox.PasswordChar = '*';
+            this.pwTextBox.PromptText = "Password";
+            this.pwTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.pwTextBox.SelectedText = "";
+            this.pwTextBox.Size = new System.Drawing.Size(180, 30);
+            this.pwTextBox.TabIndex = 3;
+            this.pwTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.pwTextBox.UseSelectable = true;
+            // 
+            // bigMainLogoPBox
+            // 
+            this.bigMainLogoPBox.Image = global::NetflixApp.Properties.Resources.nflixlogo2;
+            this.bigMainLogoPBox.Location = new System.Drawing.Point(66, 47);
+            this.bigMainLogoPBox.Name = "bigMainLogoPBox";
+            this.bigMainLogoPBox.Size = new System.Drawing.Size(600, 300);
+            this.bigMainLogoPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.bigMainLogoPBox.TabIndex = 6;
+            this.bigMainLogoPBox.TabStop = false;
+            // 
+            // smallLogoPBox
+            // 
+            this.smallLogoPBox.Image = global::NetflixApp.Properties.Resources.netflixlogo;
+            this.smallLogoPBox.Location = new System.Drawing.Point(5, 10);
+            this.smallLogoPBox.Name = "smallLogoPBox";
+            this.smallLogoPBox.Size = new System.Drawing.Size(96, 53);
+            this.smallLogoPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.smallLogoPBox.TabIndex = 5;
+            this.smallLogoPBox.TabStop = false;
+            // 
+            // progressSpinner
+            // 
+            this.progressSpinner.Location = new System.Drawing.Point(312, 272);
+            this.progressSpinner.Maximum = 100;
+            this.progressSpinner.Name = "progressSpinner";
+            this.progressSpinner.Size = new System.Drawing.Size(75, 75);
+            this.progressSpinner.Speed = 0.8F;
+            this.progressSpinner.Style = MetroFramework.MetroColorStyle.White;
+            this.progressSpinner.TabIndex = 7;
+            this.progressSpinner.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.progressSpinner.UseSelectable = true;
+            this.progressSpinner.Visible = false;
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.Location = new System.Drawing.Point(107, 23);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(82, 31);
+            this.logoutButton.TabIndex = 8;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.logoutButton.UseSelectable = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            // 
+            // NetflixForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(725, 595);
+            this.Controls.Add(this.logoutButton);
+            this.Controls.Add(this.progressSpinner);
+            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.pwTextBox);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.bigMainLogoPBox);
+            this.Controls.Add(this.wb1);
+            this.Controls.Add(this.smallLogoPBox);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.MinimumSize = new System.Drawing.Size(725, 595);
+            this.Name = "NetflixForm";
+            this.Padding = new System.Windows.Forms.Padding(23, 60, 23, 21);
+            this.Resizable = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
+            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Text = "Netflix";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TopMost = true;
+            this.TransparencyKey = System.Drawing.Color.Empty;
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bigMainLogoPBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smallLogoPBox)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.WebBrowser wb1;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroTextBox emailTextBox;
+        private MetroFramework.Controls.MetroTextBox pwTextBox;
+        private System.Windows.Forms.PictureBox smallLogoPBox;
+        private System.Windows.Forms.PictureBox bigMainLogoPBox;
+        private MetroFramework.Controls.MetroProgressSpinner progressSpinner;
+        private MetroFramework.Controls.MetroButton logoutButton;
+    }
+}
+

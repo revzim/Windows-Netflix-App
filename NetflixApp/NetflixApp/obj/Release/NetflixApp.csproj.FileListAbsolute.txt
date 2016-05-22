@@ -1,0 +1,12 @@
+C:\Users\Andy\Documents\Visual Studio 2015\Projects\NetflixApp\NetflixApp\bin\Release\NetflixApp.exe.config
+C:\Users\Andy\Documents\Visual Studio 2015\Projects\NetflixApp\NetflixApp\bin\Release\NetflixApp.exe
+C:\Users\Andy\Documents\Visual Studio 2015\Projects\NetflixApp\NetflixApp\bin\Release\NetflixApp.pdb
+C:\Users\Andy\Documents\Visual Studio 2015\Projects\NetflixApp\NetflixApp\bin\Release\MetroFramework.Design.dll
+C:\Users\Andy\Documents\Visual Studio 2015\Projects\NetflixApp\NetflixApp\bin\Release\MetroFramework.dll
+C:\Users\Andy\Documents\Visual Studio 2015\Projects\NetflixApp\NetflixApp\bin\Release\MetroFramework.Fonts.dll
+C:\Users\Andy\Documents\Visual Studio 2015\Projects\NetflixApp\NetflixApp\obj\Release\NetflixApp.NetflixForm.resources
+C:\Users\Andy\Documents\Visual Studio 2015\Projects\NetflixApp\NetflixApp\obj\Release\NetflixApp.Properties.Resources.resources
+C:\Users\Andy\Documents\Visual Studio 2015\Projects\NetflixApp\NetflixApp\obj\Release\NetflixApp.csproj.GenerateResource.Cache
+C:\Users\Andy\Documents\Visual Studio 2015\Projects\NetflixApp\NetflixApp\obj\Release\NetflixApp.exe
+C:\Users\Andy\Documents\Visual Studio 2015\Projects\NetflixApp\NetflixApp\obj\Release\NetflixApp.pdb
+C:\Users\Andy\Documents\Visual Studio 2015\Projects\NetflixApp\NetflixApp\obj\Release\NetflixApp.csprojResolveAssemblyReference.cache

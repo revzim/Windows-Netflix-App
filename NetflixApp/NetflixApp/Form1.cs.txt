@@ -1,0 +1,132 @@
+﻿using MetroFramework.Forms;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace NetflixApp
+{
+    public partial class NetflixForm : MetroForm
+    {
+        public NetflixForm()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        { 
+            wb1.Navigate("https://www.netflix.com/Login");
+            //System.Diagnostics.Process.Start("rundll32.exe", "InetCpl.cpl,ClearMyTracksByProcess 255");
+            while (wb1.ReadyState != WebBrowserReadyState.Complete)
+            {
+                Application.DoEvents();
+            }
+            //MessageBox.Show("Loaded");
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            progressSpinner.Visible = true;
+            //wb1.Visible = true;
+            wb1.BringToFront();
+            string email = emailTextBox.Text;
+            string pw = pwTextBox.Text;
+            try
+            {
+                //finds sign in form
+                HtmlElementCollection elems = wb1.Document.GetElementsByTagName("input");
+                foreach (HtmlElement elem in elems)
+                {
+                    string nameStr = elem.GetAttribute("name");
+                    if (nameStr == "email")
+                    {
+                        elem.InnerText = email;
+                    }
+                }
+
+                MessageBox.Show("Is your email correct?\n" + "Email: " + email);
+              
+                //finds button for next
+                HtmlElementCollection elems1 = wb1.Document.GetElementsByTagName("button");
+                foreach (HtmlElement elem in elems1)
+                {
+                    string typeStr = elem.GetAttribute("type");
+                    if (elem.InnerHtml.Contains("Next")) //(classStr == "ui-text-input") ||
+                    {
+                        elem.InvokeMember("Click");
+                    }
+                }
+                MessageBox.Show("Is your password correct?\n" + "Password: " + pw);
+                //finds pw form
+                HtmlElementCollection elements = wb1.Document.GetElementsByTagName("input");
+                foreach (HtmlElement element in elements)
+                {
+                    string nameStr1 = element.GetAttribute("name");
+                    string classStr1 = element.GetAttribute("ui-text-input");
+                    if (nameStr1 == "password")
+                    {
+                        element.InnerText = pw;
+                    }
+                }
+
+                //push sign in button
+                MessageBox.Show("You will now be automatically logged in...");
+                HtmlElementCollection elements1 = wb1.Document.GetElementsByTagName("button");
+                foreach (HtmlElement elem in elements1)
+                {
+                    string typeStr = elem.GetAttribute("type");
+                    if (elem.InnerHtml.Contains("Sign In")) //(classStr == "ui-text-input") ||
+                    {
+                        elem.InvokeMember("Click");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            wb1.Visible = true;
+            progressSpinner.Enabled = false;
+            progressSpinner.Visible = false;
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            wb1.Visible = false;
+            wb1.Stop();
+            ((Control)wb1).Enabled = false;
+            MessageBox.Show("You have successfully logged out!\nHope you enjoyed your show!");
+            emailTextBox.Text = "";
+            pwTextBox.Text = "";
+        }
+
+        private String getSourceCode(String url)
+        {
+            string sC = "";
+            try
+            {
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+                HttpWebResponse response = (HttpWebResponse)req.GetResponse();
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+                sC = reader.ReadToEnd();
+                reader.Close();
+                response.Close();
+                return sC;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return sC;
+        }
+
+    }
+}
